@@ -1,14 +1,14 @@
 {
-  "name": "minksmanik",
-  "version": "2.1.0",
-  "description": "A personal card for Manik Malhotra ",
-  "main": "card.js",
+  "name": "secrashi",
+  "version": "2.1.2",
+  "description": "Business Card for Sakshi Dhamija ",
+  "main": "build.js",
   "bin": {
-    "minksmanik": "./build.js"
+    "secrashi": "./build.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manikmmalhotra/npx_card.git"
+    "url": "git+https://github.com/secrashi/npx_card.git"
   },
   "scripts": {
     "test": "node card.js",
@@ -32,6 +32,6 @@
     "npx card",
     "business card"
   ],
-  "author": "Manik Malhotra",
+  "author": "Sakshi Dhamija",
   "license": "ISC"
 }

@@ -26,13 +26,13 @@ const questions = [
         name: `Send me an ${chalk.green.bold("email")}?`,
         value: () => {
           open(
-            "https://mail.google.com/mail/u/?authuser=manikmalhotra2113@gmail.com"
+            "https://mail.google.com/mail/u/?authuser=sakshidhamija15@gmail.com"
           );
-          console.log("\nDone, see you soon at inbox.\n");
+          console.log("\nGrt, the postman might arrive soon!\n");
         },
       },
       {
-        name: `Download my ${chalk.magentaBright.bold("Resume")}?`,
+        name: `Check out my ${chalk.magentaBright.bold("Resume")}?`,
         value: () => {
           // cliSpinners.dots;
           const loader = ora({
@@ -40,10 +40,10 @@ const questions = [
             spinner: cliSpinners.material,
           }).start();
           let pipe = request(
-            "https://drive.google.com/file/d/13P5a_wZkTbnvvFlHrjZmdq-euJnLmlH6/view?usp=sharing"
-          ).pipe(fs.createWriteStream("./manik-resume.html"));
+            "https://drive.google.com/file/d/1hhlkPAcKlwAq2BPfvw_dpCQE8WIMQVoK/view?usp=sharing"
+          ).pipe(fs.createWriteStream("./sakshi-resume.html"));
           pipe.on("finish", function () {
-            let downloadPath = path.join(process.cwd(), "manik-resume.html");
+            let downloadPath = path.join(process.cwd(), "sakshi-resume.html");
             console.log(`\nResume Downloaded at ${downloadPath} \n`);
             open(downloadPath);
             loader.stop();
@@ -51,9 +51,15 @@ const questions = [
         },
       },
       {
-        name: "Just quit.",
+        name: `Wanna discuss about an idea, pitch or books? ${chalk.green.bold("Call me")}`,
+        value:()=>{
+          console.log("+91 8349046111");
+        }
+      },
+      {
+        name: "I came here mistakenly.",
         value: () => {
-          console.log("Hasta la vista.\n");
+          console.log("haha bye!\n");
         },
       },
     ],
@@ -61,20 +67,23 @@ const questions = [
 ];
 
 const data = {
-  name: chalk.bold.green("             Manik Malhotra"),
-  handle: chalk.white("@manikmmalhotra"),
-  work: `${chalk.white("Student at ")} ${chalk
+  name: chalk.bold.green("            Sakshi Dhamija"),
+  handle: chalk.white("@secrashi"),
+  work: `${chalk.white("Sophomore at ")} ${chalk
     .hex("#2b82b2")
     .bold("IIIT Gwalior")}`,
-  github: chalk.gray("https://github.com/") + chalk.green("manikmmalhotra"),
+  github: chalk.gray("https://github.com/") + chalk.green("secrashi"),
   linkedin:
     chalk.gray("https://linkedin.com/in/") +
-    chalk.blue("manik-malhotra-029a22193"),
-  npx: chalk.red("npx") + " " + chalk.white("manik"),
+    chalk.blue("s15"),
+  Medium:
+  chalk.gray("https://sakshi-secrashi.medium.com/"),
+  npx: chalk.red("npx") + " " + chalk.white("secrashi"),
 
   labelWork: chalk.white.bold("       Work:"),
   labelGitHub: chalk.white.bold("     GitHub:"),
   labelLinkedIn: chalk.white.bold("   LinkedIn:"),
+  labelMedium: chalk.white.bold("       Medium:"),
   labelCard: chalk.white.bold("       Card:"),
 };
 
@@ -86,13 +95,14 @@ const me = boxen(
     ``,
     `${data.labelGitHub}  ${data.github}`,
     `${data.labelLinkedIn}  ${data.linkedin}`,
+    `${data.labelMedium}  ${data.Medium}`,
     ``,
     `${data.labelCard}  ${data.npx}`,
     ``,
-    `${chalk.italic("I am currently looking for new opportunities,")}`,
-    `${chalk.italic("my inbox is always open. Whether you have a")}`,
-    `${chalk.italic("question or just want to say hi, I will try ")}`,
-    `${chalk.italic("my best to get back to you!")}`,
+    `${chalk.italic("I am currently learning....          to unlearn,")}`,
+    `${chalk.italic("If I do not respond within a day, just know that ")}`,
+    `${chalk.italic("I'm writing a poem and will get back to u soon.  hopefully! ")}`,
+    `${chalk.italic("Umm..  Bye!")}`,
   ].join("\n"),
   {
     margin: 1,
@@ -105,7 +115,7 @@ const me = boxen(
 
 console.log(me);
 const tip = [
-  `Tip: Try ${chalk.cyanBright.bold("cmd/ctrl + click")} on the links above`,
+  `Tip: Do not try to ${chalk.cyanBright.bold("cmd/ctrl + click")} on the links above`,
   "",
 ].join("\n");
 console.log(tip);
